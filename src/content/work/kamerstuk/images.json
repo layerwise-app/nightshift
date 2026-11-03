@@ -1,0 +1,112 @@
+{
+  "after-product": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAwCdASoYAA8APt1cpkyopSOiMAgBEBuJZwAAW8tVLGoBPL5LgAD+7YB09Tpy+t3gEeyuafTYNu6YnfVYpfCebNYboYwOTpQAAA=="
+  },
+  "before-catalogue": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAwCdASoYAA8APt1epkyopSOiMAgBEBuJZwAAUqf05lvCCJZdGAAA/aVKsmhSpDcs0trpcxF5m29ffUy7TN6T9fAtWI3AQAA="
+  },
+  "cover": {
+    "width": 2880,
+    "height": 1920,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoYABAAPt1epkyopSOiMAgBEBuJQBOmUABpLjefVS1Hvpb1QAD+52C+BH39ILRJekKxNEF+7DPQL7DFmQ+Bmmzd/b+KiK/9WJB5SgM3BkTqEJJ9JDX04jetf5swGec4WgA="
+  },
+  "full-collection": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABwAwCdASoYAA8ALqVut1ujKKioiICkSygGJsId9kYmu1aCswAA9r9SHJfG01xkuwktMYOITXnu5UCv4klbHlNrnkZ9FRE+pt5mmJH0kgAAAA=="
+  },
+  "full-materials": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwBACdASoYAA8APt1apkyopSOiMAgBEBuJQBOmUABv9gCcpnBt1zvAlPwA/dJuZkMzr3jYu8IZtAveX6068On1IJduuJXIMutivnClNaRvrfhuJ4AnVFmovnxAtqvggAA="
+  },
+  "full-renders": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoYAA8APt1epkyopSOiMAgBEBuJZwAAW+kt3Vc1lkB6AAD+6wiyWXSic3HhS1vfw1ryh02REldsVzS1tg3hBxIERGvatl6PkqOwEAAA"
+  },
+  "full-showroom": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYAA8APt1iqUyopiQiMAgBEBuJZgCdMoAKR5jUTMDjqG/qIAD+4pf7/OONmE9J/7xhORq0YtWuEgEJ5t4Nyzyk9Q+Hvm/z0SafR/WfnCCZloovFA4Y6SHvCounvNKLlZ8AAA=="
+  },
+  "full-workshop": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwBACdASoYAA8APt1epkyopSOiMAgBEBuJZQC06CHpQPj9YcxIHnOqSwAA/gi/Bzb4JsFcNP4T1xENCepX0xh/SsuGI1dy9LKveXSHC8cUh4KyGp1AAA=="
+  },
+  "pair-cart-a": {
+    "width": 2880,
+    "height": 3600,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwBACdASoTABgAPt1ep0yopSOiMAgBEBuJZACdL6ABnG8B4tdv/HJz1cjAAAD9IbOn8UXZuWGVlUPJ4r72GHH5vz4okpDoGON0ZRb/dWu0DsSKYD1x2NkEs5ow0XGUDeF60UAA"
+  },
+  "pair-cart-b": {
+    "width": 2880,
+    "height": 3600,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoTABgAPt1ep0yopSOiMAgBEBuJZQDA3CLvKoKF+JyuH0ogAP5xUaOBm+vbd56nEZUPIYwh2taF+aGvSS2aPtWxXq8L8McbpcmKFGAA"
+  }
+}

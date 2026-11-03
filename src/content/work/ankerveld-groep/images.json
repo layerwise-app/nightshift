@@ -1,0 +1,90 @@
+{
+  "cover": {
+    "width": 2880,
+    "height": 1920,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACQBACdASoYABAAPt1cp0yopSOiMAgBEBuJaACdMoR3AH4dW5EAW/LVs3zBVoAA/vub9/EjaMQ/UKNdtKDsIZn2deEDCWLPI86ZtZODvbsNyu4g0fA7oWmVeUs6vvsHFqIT2qT6wXX5bsdcev0LS5/ascjqFGZgAAA="
+  },
+  "fleet-poster": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAwCdASoYAA8APt0+s1SooiWjmAEQG4ljAJ0AHpD/N4si9WQAAP7jSXY0dXjZhYzvXypIDq0QnftmWo4BhZQuYONDfpJrQ0AAAA=="
+  },
+  "full-asset": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBACdASoYAA8APt1qqU4opqQiMAgBEBuJagCdMoMYAN1R6H4bI40AAAD5Utu9N3b0ffj8IF5N+SNAJNsZtn3Ohwf4HHGcx93DuNZ4NnzOWaL8/nFNyLKOprHezoKgFrnn62eFZNRkk27X7XQAAA=="
+  },
+  "full-certificates": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoYAA8APt1iqUyopiQiMAgBEBuJZQCdAB6QOhsiTwAA/u6gIq7DePZxuG4rDXOA/9tx4CY2skpMeY6ll6jok6Q4/4lgz8AA"
+  },
+  "full-orders": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAwCdASoYAA8APt0+s1SooiWjmAEQG4ljAJ0ygAMAMt8NBXSWgAD+6/3tyrDzOdokL5Swraju1z+CUre0chHcDmAAAA=="
+  },
+  "full-overview": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAABwAwCdASoYAA8APt1cp00opSOiMAgBEBuJZwCw7B6QNoDySWAA/geaQ5fBWEUM+Y7vke+p9boq5hRfPGPO0c4AAAA="
+  },
+  "pair-phones-a": {
+    "width": 2880,
+    "height": 3600,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwBACdASoTABgAPtVapEyoJSOiMAwBABqJbACxHuN5aCXXLu3VvCPlZb2znIfoAP6TWejU8eU4JJvqvhi8+85Ntorvbp+n/n9+7Itl8r9I/fYMiHID10EfMga818QzltoUyE3KXQSTjSIfeG1Ir0KcZxtQKyKaAFeAAAAA"
+  },
+  "pair-phones-b": {
+    "width": 2880,
+    "height": 3600,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABQBACdASoTABgAPt1cpUyopSOiMAgBEBuJZQC06CHf5CQecbvbLczjXA4AAP7udnnWwNSIoeawyJi3RzOqnlP6YvmwQpj6eU4EpGo1CPkxlwrIrWfUyywdHsJ4LL2sjFIea0AJAAA="
+  }
+}

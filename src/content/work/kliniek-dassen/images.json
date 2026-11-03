@@ -1,0 +1,101 @@
+{
+  "condition-page": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYAA8APt1gqU2opaQiMAgBEBuJYwC7ACHfXyGIj0KoAQAA4n7MQxKDu5jw7Drou6BAjhxwP6y+68e34Nq8tr6lUbqDOfKtWsOgAA=="
+  },
+  "cover": {
+    "width": 2880,
+    "height": 1920,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABwAwCdASoYABAALqVut1ujKKioiICkSzgABc7GyiEU4W/KtgAA/vixm7A1TTOhhkYRIATFV/Sz1LZoqIHGf+wUL2bauL3BAAA="
+  },
+  "operation-prep": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoYAA8APt1epkyopSOiMAgBEBuJYwCdACFmJf/EYYt53lYQAP7r3i8LYqXYjyq5cLKQTBOTgPxbGKrvjfTkpZ7idwvpjfXx6J4t+8+tIl4f/M6lUeIfaG7NjgugAA=="
+  },
+  "referral-done": {
+    "width": 2880,
+    "height": 3600,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACQBACdASoTABgAPt1kqE4opaOiMBgIARAbiWIAsRuhxJ4VI4nxYNaAIP7hdAAA/o04sIPrK2334r72NZU4nKGa5OrXIyodNwkesBS3bgFpnjyuDh4aHE/CjLZYaNsAAAA="
+  },
+  "referral-upload": {
+    "width": 2880,
+    "height": 3600,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAwCdASoTABgAPt1apkyopSOiMAgBEBuJZwDLpB6Rq8+t309o2OYsAP7Tnv9+pK5svdlLOMJpJfIJEz2lWFr8UK8VBAAA"
+  },
+  "site-after": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAwCdASoYAA8APt1cp0yopSOiMAgBEBuJaQAAW+mXYXP4JjXBsqMAAP7tRG1I7cFxdbH4BrvNQFt9BdAv25kAAAA="
+  },
+  "site-before": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAwCdASoYAA8APt1cqUyopSQiMAgBEBuJZQC7AB6OK72JL6lEgAD+6oc2VEHCHPaDhEUo2+q/ar4Y7GScQRYSQGDUVoIOHTgAAA=="
+  },
+  "team-page": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAwCdASoYAA8APt1cp0yopSOiMAgBEBuJaQAAW+pB7m2OmfFAAP7vv/esdRa12LbF65EcfR+AAA=="
+  },
+  "wait-times": {
+    "width": 2880,
+    "height": 1800,
+    "widths": [
+      800,
+      1600,
+      2880
+    ],
+    "format": "webp",
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoYAA8APt1cp00opSOiMAgBEBuJZQC/OCHZzrPI3uu6AAAA/u1Pcb3y0tTO3uXi916j6D0/Aj0n3+vjw9A3w7Cj3wAAAA=="
+  }
+}

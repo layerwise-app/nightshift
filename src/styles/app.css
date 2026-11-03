@@ -1,9 +1,105 @@
 @import 'tailwindcss' source('../');
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
-@import '@fontsource-variable/outfit';
+
+/*
+ * Nightshift design tokens.
+ * Colors and font families come from `src/portfolio.config.ts`; the root route
+ * writes them to `--ns-*` variables on <html>. Everything here derives from
+ * those variables.
+ */
 
 @custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: var(--ns-font-display);
+  --font-sans: var(--ns-font-body);
+  --font-heading: var(--ns-font-display);
+  --font-mono: var(--ns-font-mono);
+
+  --color-bg: var(--ns-bg);
+  --color-surface: var(--ns-surface);
+  --color-ink: var(--ns-text);
+  --color-ink-2: color-mix(in oklab, var(--ns-text) 74%, var(--ns-bg));
+  --color-ink-3: color-mix(in oklab, var(--ns-text) 58%, var(--ns-bg));
+  --color-line: color-mix(in oklab, var(--ns-text) 12%, var(--ns-bg));
+  --color-line-strong: color-mix(in oklab, var(--ns-text) 24%, var(--ns-bg));
+  --color-signal: var(--ns-signal);
+  --color-on-signal: var(--ns-on-signal);
+  --color-paper: var(--ns-paper);
+  --color-on-paper: var(--ns-on-paper);
+  --color-paper-2: color-mix(in oklab, var(--ns-on-paper) 66%, var(--ns-paper));
+  --color-paper-line: color-mix(in oklab, var(--ns-on-paper) 14%, var(--ns-paper));
+
+  /* shadcn/ui tokens, mapped to the same palette so its components match. */
+  --color-background: var(--ns-bg);
+  --color-foreground: var(--ns-text);
+  --color-card: var(--ns-surface);
+  --color-card-foreground: var(--ns-text);
+  --color-popover: var(--ns-surface);
+  --color-popover-foreground: var(--ns-text);
+  --color-primary: var(--ns-signal);
+  --color-primary-foreground: var(--ns-on-signal);
+  --color-secondary: color-mix(in oklab, var(--ns-text) 10%, var(--ns-bg));
+  --color-secondary-foreground: var(--ns-text);
+  --color-muted: color-mix(in oklab, var(--ns-text) 8%, var(--ns-bg));
+  --color-muted-foreground: color-mix(in oklab, var(--ns-text) 62%, var(--ns-bg));
+  --color-accent: color-mix(in oklab, var(--ns-text) 10%, var(--ns-bg));
+  --color-accent-foreground: var(--ns-text);
+  --color-destructive: #ff5c4d;
+  --color-border: color-mix(in oklab, var(--ns-text) 12%, var(--ns-bg));
+  --color-input: color-mix(in oklab, var(--ns-text) 18%, var(--ns-bg));
+  --color-ring: var(--ns-signal);
+  --color-chart-1: var(--ns-signal);
+  --color-chart-2: color-mix(in oklab, var(--ns-text) 70%, var(--ns-bg));
+  --color-chart-3: color-mix(in oklab, var(--ns-text) 50%, var(--ns-bg));
+  --color-chart-4: color-mix(in oklab, var(--ns-text) 35%, var(--ns-bg));
+  --color-chart-5: color-mix(in oklab, var(--ns-text) 20%, var(--ns-bg));
+  --color-sidebar: var(--ns-surface);
+  --color-sidebar-foreground: var(--ns-text);
+  --color-sidebar-primary: var(--ns-signal);
+  --color-sidebar-primary-foreground: var(--ns-on-signal);
+  --color-sidebar-accent: color-mix(in oklab, var(--ns-text) 10%, var(--ns-bg));
+  --color-sidebar-accent-foreground: var(--ns-text);
+  --color-sidebar-border: color-mix(in oklab, var(--ns-text) 12%, var(--ns-bg));
+  --color-sidebar-ring: var(--ns-signal);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 22px;
+  --radius-4xl: 28px;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+:root {
+  --gutter: 16px;
+  --header-h: 56px;
+  --statusbar-h: 0px;
+  color-scheme: dark;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --gutter: 44px;
+    --header-h: 64px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  :root {
+    --statusbar-h: calc(40px + env(safe-area-inset-bottom));
+  }
+}
 
 @layer base {
   *,
@@ -11,146 +107,482 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--color-line);
+    /* Set up front so transition-colors never fades the focus ring in from grey. */
+    outline-color: var(--ns-signal);
   }
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+
   html {
-    @apply font-sans;
-  }
-}
-
-@layer base {
-  html {
-    color-scheme: light dark;
-  }
-
-  * {
-    @apply border-gray-200 dark:border-gray-800;
+    background: var(--ns-bg);
+    color: var(--ns-text);
+    font-family: var(--ns-font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scrollbar-color: var(--color-line-strong) var(--ns-bg);
+    -webkit-tap-highlight-color: transparent;
   }
 
-  html,
   body {
-    @apply text-gray-900 bg-gray-50 dark:bg-gray-950 dark:text-gray-200;
+    background: var(--ns-bg);
+    color: var(--ns-text);
+    font-size: 16px;
+    line-height: 1.55;
+    min-height: 100svh;
+    overflow-x: clip;
+    padding-bottom: var(--statusbar-h);
   }
 
-  .using-mouse * {
-    outline: none !important;
+  ::selection {
+    background: var(--ns-signal);
+    color: var(--ns-on-signal);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ns-signal);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  [data-surface='light'] :focus-visible {
+    outline-color: var(--ns-on-paper);
+  }
+
+  img,
+  video,
+  canvas {
+    display: block;
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--ns-font-display);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 }
 
-@theme inline {
-  --font-heading: var(--font-sans);
-  --font-sans: 'Outfit Variable', sans-serif;
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --color-foreground: var(--foreground);
-  --color-background: var(--background);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+/* ---------------------------------------------------------------- layout */
+
+/* The content frame: everything sits between two hairline rails. */
+.frame {
+  margin-inline: var(--gutter);
+  border-inline: 1px solid var(--color-line);
+  position: relative;
 }
 
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: var(--color-sky-700);
-  --primary-foreground: var(--color-white);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: var(--color-sky-700);
-  --sidebar-primary-foreground: var(--color-white);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+.frame-pad {
+  padding-inline: 20px;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: var(--color-sky-400);
-  --primary-foreground: var(--color-sky-950);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: var(--color-sky-400);
-  --sidebar-primary-foreground: var(--color-sky-950);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+@media (min-width: 768px) {
+  .frame-pad {
+    padding-inline: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .frame-pad {
+    padding-inline: 40px;
+  }
+}
+
+.rule-t {
+  border-top: 1px solid var(--color-line);
+}
+
+.rule-b {
+  border-bottom: 1px solid var(--color-line);
+}
+
+[data-surface='light'] {
+  background: var(--ns-paper);
+  color: var(--ns-on-paper);
+  color-scheme: light;
+}
+
+[data-surface='light'] .frame,
+[data-surface='light'] .rule-t,
+[data-surface='light'] .rule-b,
+[data-surface='light'] * {
+  border-color: var(--color-paper-line);
+  outline-color: var(--ns-on-paper);
+}
+
+/* ------------------------------------------------------------ typography */
+
+.font-display {
+  font-family: var(--ns-font-display);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+}
+
+.label {
+  font-family: var(--ns-font-mono);
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 450;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 1024px) {
+  .label {
+    font-size: 11.5px;
+  }
+}
+
+.label-bracket::before {
+  content: '[\00a0';
+}
+
+.label-bracket::after {
+  content: '\00a0]';
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.prose-ns p + p {
+  margin-top: 1em;
+}
+
+/* --------------------------------------------------------------- buttons */
+
+.btn {
+  --btn-h: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: var(--btn-h);
+  padding-inline: 22px;
+  border-radius: 999px;
+  font-family: var(--ns-font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+  position: relative;
+  isolation: isolate;
+}
+
+.btn-signal {
+  background: var(--ns-signal);
+  color: var(--ns-on-signal);
+}
+
+.btn-signal:hover {
+  background: color-mix(in oklab, var(--ns-signal) 86%, white);
+}
+
+.btn-line {
+  border: 1px solid var(--color-line-strong);
+  color: var(--ns-text);
+}
+
+.btn-line:hover {
+  border-color: var(--ns-text);
+}
+
+[data-surface='light'] .btn-line {
+  border-color: color-mix(in oklab, var(--ns-on-paper) 30%, var(--ns-paper));
+  color: var(--ns-on-paper);
+}
+
+[data-surface='light'] .btn-line:hover {
+  border-color: var(--ns-on-paper);
+}
+
+.btn-ink {
+  background: var(--ns-on-paper);
+  color: var(--ns-paper);
+}
+
+.btn-ink:hover {
+  background: color-mix(in oklab, var(--ns-on-paper) 82%, var(--ns-paper));
+}
+
+/* Underlined text link that grows its rule on hover. */
+.link-rule {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 2px;
+  transition: background-size 0.3s var(--ease-out-quart);
+}
+
+.link-rule:hover {
+  background-size: 0% 1px;
+  background-position: 100% 100%;
+}
+
+/* ------------------------------------------------------- custom cursor */
+
+html.has-cursor,
+html.has-cursor a,
+html.has-cursor button,
+html.has-cursor [role='button'],
+html.has-cursor label,
+html.has-cursor summary,
+html.has-cursor select {
+  cursor: none;
+}
+
+html.has-cursor input,
+html.has-cursor textarea,
+html.has-cursor [contenteditable='true'] {
+  cursor: text;
+}
+
+html.has-cursor input[type='range'],
+html.has-cursor input[type='checkbox'],
+html.has-cursor input[type='radio'] {
+  cursor: none;
+}
+
+/* ------------------------------------------------------------- motion */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+html.has-cursor .ns-cursor {
+  display: block;
+}
+
+.ns-cursor-dot,
+.ns-cursor-ring {
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+  will-change: transform;
+}
+
+.ns-cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: var(--ns-signal);
+}
+
+.ns-cursor-ring {
+  width: 30px;
+  height: 30px;
+  border: 1px solid color-mix(in oklab, var(--ns-text) 55%, transparent);
+  border-radius: 15px;
+  transition:
+    opacity 0.2s,
+    border-color 0.2s,
+    background-color 0.2s;
+}
+
+html[data-cursor-state='link'] .ns-cursor-ring {
+  border-color: var(--ns-signal);
+  background: color-mix(in oklab, var(--ns-signal) 8%, transparent);
+}
+
+html[data-cursor-state='magnet'] .ns-cursor-ring {
+  border-color: var(--ns-signal);
+}
+
+html[data-cursor-state='magnet'] .ns-cursor-dot {
+  opacity: 0;
+}
+
+html[data-cursor-surface='light'] .ns-cursor-dot {
+  background: var(--ns-on-paper);
+}
+
+html[data-cursor-surface='light'] .ns-cursor-ring {
+  border-color: color-mix(in oklab, var(--ns-on-paper) 60%, transparent);
+}
+
+html[data-cursor-surface='light'][data-cursor-state='link'] .ns-cursor-ring,
+html[data-cursor-surface='light'][data-cursor-state='magnet'] .ns-cursor-ring {
+  border-color: var(--ns-on-paper);
+  background: color-mix(in oklab, var(--ns-on-paper) 6%, transparent);
+}
+
+html[data-cursor-hidden='true'] .ns-cursor-dot,
+html[data-cursor-hidden='true'] .ns-cursor-ring {
+  opacity: 0 !important;
+}
+
+html[data-cursor-down='true'] .ns-cursor-dot {
+  scale: 0.6;
+}
+
+[data-magnetic] {
+  transition: transform 0.35s var(--ease-out-quart);
+}
+
+/* Live demo phones scale in steps so their size is known before JavaScript.
+ * Below 768px the stage bleeds to the frame rails; each step fits a 412px
+ * phone into the narrowest screen of its range. */
+.demo-stage {
+  --s: 0.62;
+}
+
+@media (min-width: 360px) {
+  .demo-stage {
+    --s: 0.72;
+  }
+}
+
+@media (min-width: 390px) {
+  .demo-stage {
+    --s: 0.79;
+  }
+}
+
+@media (min-width: 430px) {
+  .demo-stage {
+    --s: 0.88;
+  }
+}
+
+@media (min-width: 768px) {
+  .demo-stage {
+    --s: 0.86;
+  }
+}
+
+@media (min-width: 1280px) and (min-height: 860px) {
+  .demo-stage {
+    --s: 0.94;
+  }
+}
+
+/* ------------------------------------------------------- client grid */
+
+.client-cell {
+  --cell-bg: var(--ns-bg);
+  background: var(--cell-bg);
+  color: var(--color-ink-3);
+  transition:
+    background-color 0.45s var(--ease-out-quart),
+    color 0.45s var(--ease-out-quart);
+  transition-delay: calc(var(--d, 0) * 75ms);
+}
+
+.client-cell[data-level='1'] {
+  color: var(--color-ink-2);
+}
+
+.client-cell[data-level='2'] {
+  color: var(--ns-text);
+  --cell-bg: color-mix(in oklab, var(--ns-text) 3%, var(--ns-bg));
+}
+
+.client-cell[data-level='3'] {
+  color: var(--ns-signal);
+  --cell-bg: color-mix(in oklab, var(--ns-text) 7%, var(--ns-bg));
+}
+
+.client-cell[data-level='3'] .label {
+  color: var(--ns-text);
+}
+
+/* ------------------------------------------------------------ work rail */
+
+.work-rail-track {
+  display: grid;
+  gap: 48px 20px;
+  padding-bottom: 88px;
+}
+
+@media (min-width: 768px) {
+  .work-rail-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.work-rail-end {
+  display: none;
+}
+
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .work-rail {
+    --card: clamp(320px, min(37vw, calc((100svh - var(--header-h) - 330px) * 1.5)), 600px);
+    --gap: 20px;
+    height: calc(
+      100svh - var(--header-h) +
+        var(--travel, calc(var(--n) * (var(--card) + var(--gap)) + 80px - 100vw + 2 * var(--gutter)))
+    );
+  }
+
+  .work-rail-sticky {
+    position: sticky;
+    top: var(--header-h);
+    height: calc(100svh - var(--header-h));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .work-rail-viewport {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .work-rail-track {
+    position: relative;
+    display: flex;
+    gap: var(--gap);
+    width: 100%;
+    padding-bottom: 0;
+    will-change: transform;
+  }
+
+  .work-rail-card {
+    flex: 0 0 var(--card);
+    transform-origin: 50% 60%;
+    will-change: transform;
+  }
+
+  .work-rail-end {
+    display: block;
+  }
+
+  .work-rail-progress {
+    display: flex;
+  }
 }
