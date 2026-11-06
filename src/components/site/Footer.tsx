@@ -71,6 +71,21 @@ export function Footer() {
               <br />
               Crew of {portfolio.crewSize}, {location.city}
             </p>
+            <a
+              href='https://layerwise.app'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex w-fit rounded-[6px] opacity-80 transition-opacity hover:opacity-100'
+            >
+              <img
+                src='https://layerwise.app/powered-by-dark.png'
+                alt='Powered by Layerwise'
+                width={174}
+                height={28}
+                loading='lazy'
+                className='block h-[28px] w-[174px]'
+              />
+            </a>
           </div>
         </div>
       </div>

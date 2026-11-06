@@ -1,17 +1,23 @@
+<a href="https://layerwise.app"><picture><source media="(prefers-color-scheme: dark)" srcset="https://layerwise.app/powered-by-dark.png"><img src="https://layerwise.app/powered-by.png" alt="Powered by Layerwise" width="174" height="28"></picture></a>
+
 # Nightshift
 
-<a href="https://layerwise.app"><img src="https://layerwise.app/powered-by.png" alt="Powered by Layerwise" width="320" /></a>
+A dark portfolio template for a small web and brand studio, or a freelancer
+who wants their site to feel like one. It ships as **Nightshift Studio**, a
+fictional crew of six in Rotterdam, with six sample case studies whose screens
+are real React components. See the live demo at
+[nightshift.layerwise.site](https://nightshift.layerwise.site/).
 
-A dark portfolio template for a small web and brand studio. It ships as
-**Nightshift Studio**, a fictional crew of six in Rotterdam, with six sample
-case studies whose screens are real React components.
+Visitors land on Home, with a 3D logo that follows the pointer, readouts on
+the screen edges (scroll, local time, open slots), a pinned rail of case
+cards, a client grid, a full-white pricing section and a ⌘K **Ask the
+studio** panel that answers from a written Q&A list. From there they can
+browse Work, read a page per case study (each sample has a working phone demo),
+learn about the crew on About and download the studio CV, and send a message
+from Contact (saved to the database, and emailed to you if you want).
 
-Home has a 3D logo that follows the pointer, readouts on the screen edges
-(scroll, local time, open slots), a pinned rail of case cards, a client grid,
-a full-white pricing section and a ⌘K **Ask the studio** panel that answers
-from a written Q&A list. The other pages are Work, a page per case study,
-About (with a CV download) and Contact (saved to the database, and emailed to
-you if you want).
+Nightshift was built with [Layerwise](https://layerwise.app); open it in
+Layerwise to make your own version.
 
 Built with TanStack Start, React, Tailwind CSS and Three.js on Cloudflare
 Workers, with a D1 database through Drizzle. There are no accounts, CMS,
